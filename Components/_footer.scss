@@ -1,0 +1,98 @@
+footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .footer-left {
+  
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    @media screen and (min-width: 1000px) {
+  padding-left: 200px;
+    }
+
+    h6 {
+      font-family: $font-1;
+      font-size: 2rem;
+      color: rgb(166, 144, 69);
+      margin-left: 30px;
+      padding-top: 60px;
+    }
+    p {
+      color: rgba(254, 254, 254, 0.4);
+      font-family: $font-2;
+      font-weight: 100;
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-top: 30px;
+      margin-bottom: 80px;
+      line-height: 35px;
+    }
+  }
+
+  .footer-right {
+    padding-top: 60px;
+    width: 100%;
+    background: #21201e;
+    display: flex;
+    flex-direction: column;
+
+    .newsletter {
+      margin-left: 30px;
+
+      h6 {
+        font-size: 1rem;
+        font-family: $font-2;
+        color: rgba(254, 254, 254, 0.9);
+      }
+
+      .email {
+        padding-top: 15px;
+
+        input {
+          height: 30px;
+          background: none;
+          max-width: 50%;
+          border: 1px solid rgba(166, 144, 69, 0.4);
+          color: rgba(254, 254, 254, 0.2);
+          font-family: $font-3;
+        }
+      }
+    }
+
+    .follow-us {
+     margin-left: 30px;
+     margin-top: 40px;
+
+      @media screen and (max-width: 500px) {
+        padding-top:50px;
+        padding-bottom: 20px;
+      }
+
+     
+
+
+      h6 {
+        font-size: 1rem;
+        font-family: $font-2;
+        color: rgba(254, 254, 254, 0.9);
+      }
+
+      ul {
+        padding-top: 10px;
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+
+        
+      }
+    }
+  }
+}

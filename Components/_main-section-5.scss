@@ -1,0 +1,64 @@
+.section-5 {
+  background: #21201e;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 350px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: url(../assets/img/gmap.jpg) center/cover;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -550px;
+  }
+
+  .first-part {
+    background: #eee;
+    margin: 0 auto;
+    width: 67%;
+    position: relative;
+    padding-bottom: 40px;
+
+    .img-ceo {
+      text-align: center;
+
+      img {
+        position: absolute;
+        height: 50px;
+        border-radius: 150px;
+        top: -25px;
+        right: 50%;
+        left: 47%;
+      }
+    }
+
+    p {
+      margin-top: 60px;
+      margin-left: 70px;
+      margin-right: 70px;
+      margin-bottom: 30px;
+      font-family: $font-3;
+    }
+
+    h5 {
+      text-align: center;
+      font-family: $font-2;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    h6 {
+      padding-top: 10px;
+      text-align: center;
+      font-family: $font-3;
+      color: rgb(166, 144, 69);
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.section-1 {
+
+  
+
+  @media screen and (min-width: 1000px) {
+    display:grid;
+    grid-template-columns: 50% 50% ;
+ }
+  .food-pic  { 
+    display: none;
+
+    @media screen and (min-width: 1000px) {
+      
+      display:inherit;
+      margin:0 auto;
+    height: 180px;  }
+  }
+  .our-store {
+    margin: 25px 25px;
+    border: 1px dashed  rgba(166, 144, 69, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+
+    .titre-2 {
+      
+
+      h4 {
+        font-size: 2rem;
+        font-family: $font-1;
+        color: rgb(166, 144, 69);
+        text-align: center;
+        font-weight: 300;
+
+        @media screen and(min-width :800px) {
+          font-size: 3rem;
+          
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-family: $font-2;
+        font-weight: 900;
+        margin-top: -16px;
+      }
+    }
+
+    .img-2 {
+      margin-bottom: 30px;
+      
+    }
+    .p-2 {
+      font-family: $font-3;
+      padding-left:20px;
+      padding-right: 20px;
+      margin-bottom: 30px;
+    }
+    .img-russel{ 
+      margin-bottom: 20px;
+
+      img {
+      border-radius: 200px;}
+    }
+    .chef-cook { 
+      h5{ 
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: $font-2;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      p{ 
+        text-align: center;
+        font-family: $font-3;
+        color:gray ;
+        font-weight: 500;
+      }
+    }
+  }
+ 
+}

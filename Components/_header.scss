@@ -1,0 +1,119 @@
+header {
+  background: url(../assets/img/bg-slider-06.jpg) center/cover;
+  height: 100vh;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 50px;
+
+    h2 {
+      color: $color-1;
+      font-family: $font-1;
+      font-size: 4rem;
+
+      @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+      }
+    }
+
+    .navigation {
+      display: none;
+
+      @media screen and (min-width: 1000px) {
+        display: flex;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          padding-left: 50px;
+          color: $color-1;
+          font-family: $font-2;
+          font-size: 1.1rem;
+
+          @media screen and (max-width: 1200px) {
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+
+    .social-network {
+      color: $color-1;
+
+      @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .titre-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+
+    h2 {
+      color: $color-1;
+      font-family: $font-1;
+      font-weight: 300;
+      font-size: 4rem;
+      color: rgb(166, 144, 69);
+
+      @media screen and (min-width: 1000px) {
+        font-size: 6rem;
+      }
+    }
+
+    h1 {
+      font-family: $font-2;
+      letter-spacing: 10px;
+      font-size: 3rem;
+      margin-top: -35px;
+      color: $color-1;
+
+      @media screen and (min-width: 1000px) {
+        font-size: 5rem;
+        margin-top: -45px;
+      }
+    }
+
+    img {
+      font-size: 40px;
+      margin: 40px 0;
+    }
+
+    h3 {
+      color: $color-1;
+      font-family: $font-2;
+      letter-spacing: 8px;
+      font-size: 0.8rem;
+      font-weight: 300;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+
+      @media screen and (max-width: 550px) {
+        font-size: 0.6rem;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 1000px) {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
