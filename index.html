@@ -35,7 +35,7 @@
       </div>
       <div class="social-network">
         <ul>
-          <li><img src="./assets/icons/fb.svg" alt="logo-fb"></li>
+          <li class="fb"><img src="./assets/icons/fb.svg" alt="logo-fb"></li>
           <li><img src="./assets/icons/twt.svg" alt="logo-twt"></li>
           <li><img src="./assets/icons/insta.svg" alt="logo-insta"></li>
         </ul>
@@ -69,7 +69,7 @@
         </div>
 
         <div class="img-russel">
-          <img src="./assets/img/avatar-01.jpg" alt="Photo de chef Russel">
+          <img src="./assets/img/avatar-01.jpg" alt="Photo de chef Russel"></figure></a> 
         </div>
         <div class="chef-cook">
           <h5>Russell Stephens</h5>
@@ -259,18 +259,20 @@
         </div>
         <div class="booking-img" </div> <img src="./assets/img/ic-plate.png" alt="PHOTO COUVERT">
         </div>
-        <div class="booking-form">
+        <div class="booking-res-form">
           <form action="">
-            <input type="number" id="people" value="People" min="1" max="10" required >
-            <input type="date" id="start" value="15/07/2020" min="15/07/2020" max="01/01/2023">
-            <input type="time" id="time" min="07:00" max="22:00" required>
-            <input type="text" id="name" value="Name" required>
-            <input type="tel" id="phone" value ="Phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-            <input type="text" id="Email" value="Email">
-        </div>
-        <input type="submit" value="BOOK NOW" class="booking-btn">
-      </div>
+            <select name="who" id="booking-people" required="">
+              <option value="People">People</option>
+            </select>
+            <input type="date" id="booking-date" value="2020-07-15" min="2020-07-15" max="2022-12-31" required="">
+            <input type="time" id="booking-time" min="07:00" max="23:00" required="">
+            <input type="text" id="booking-name" placeholder="Name" required="" autocomplete="off">
+            <input type="text" id="booking-phone" placeholder="Phone" required="" autocomplete="off">
+            <input type="text" id="booking-email" placeholder="Email" required="" autocomplete="off">
+            <button class="btn1" id="booking-button">BOOK NOW</button>
+        
       </form>
+    </div>
     </section>
   </section>
     <section class="events">
@@ -328,10 +330,9 @@
         <img src="./assets/img/avatar-02.jpg" alt="Photo Russel">
       </div>
       <div class="ceo-p">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Aperiam nesciunt incidunt modi a reprehenderit dolores repudiandae! Magnam mollitia eligendi doloribus culpa
-          in.
-          Dolores, sed. Omnis fugit ex quod porro quia. </p>
+        <p> <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Aperiam nesciunt incidunt modi a reprehenderit dolores repudiandae! Magnam mollitia eligendi doloribus culpa   Dolores, sed. Omnis fugit ex quod porro quia
+          Dolores, sed. Omnis fugit ex quod porro quia  <i class="fas fa-quote-right"></i>  </p>
       </div>
       <div class="ceo-h5">
         <h5>Russel Stepehns</h5>
@@ -372,6 +373,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>

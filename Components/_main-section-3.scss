@@ -2,6 +2,7 @@
   background: #21201e;
 
   .section-3 {
+    width: 90%;
     padding-top: 80px;
     padding-bottom: 100px;
     display: flex;
@@ -18,7 +19,7 @@
 
     .section-3-leftside {
       background: black;
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -121,16 +122,16 @@
 
     .section-3-rightside {
       background: #eee;
-      width: 90%;
+      width: 100%;
+      padding-bottom: 20px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       .booking {
-      
         margin: 0 auto;
-     padding-top: 50px;
+        padding-top: 50px;
         h4 {
           text-align: center;
           font-family: $font-1;
@@ -150,11 +151,10 @@
           margin: -8px;
           font-size: 1.5rem;
           font-weight: 900;
-          
+
           @media screen and(min-width :800px) {
             margin: -16px;
           }
-          
         }
       }
       .booking-img {
@@ -171,24 +171,157 @@
         }
       }
 
-      .booking-form {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-          "people date "
-          "time name"
-          "phone email";
-      }
+      .booking-res-form {
+        margin: 0 auto;
 
-      #people {
-        grid-area: "people";
-      }
-      #start {
-        grid-area: "date";
-      }
-      #time {
-        grid-area: "time";
+        form {
+          height: 320px;
+          display: grid;
+          grid-template-columns: repeat(2, 50%);
+          grid-template-rows: 25% 25% 25% 50%;
+          grid-template-areas:
+            "people date"
+            "time name"
+            "phone email"
+            "btn btn";
+          gap: 10px 3%;
+          margin: 0 auto;
+          @media screen and(min-width :1000px) {
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: 25% 25% 50%;
+            grid-template-areas:
+              "people date time"
+              "name phone email"
+              "btn btn btn";
+          }
+        }
+        #booking-people {
+          grid-area: people;
+          height: 50px;
+          margin: auto 0;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+        }
+
+        #booking-date {
+          grid-area: date;
+          height: 50px;
+          margin: auto 0;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+        }
+        #booking-time {
+          grid-area: time;
+          height: 50px;
+          margin: auto 0;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+        }
+        #booking-name {
+          grid-area: name;
+          height: 50px;
+          margin: auto 0;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+        }
+        #booking-phone {
+          grid-area: phone;
+          height: 50px;
+          margin: auto 0;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+        }
+        #booking-email {
+          grid-area: email;
+          height: 50px;
+          margin: auto 0;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          position: relative;
+          border-bottom: 1px solid lightgrey;
+        }
+        #booking-button {
+          grid-area: btn;
+          height: 50px;
+          background: black;
+          color: $color-1;
+          border: none;
+
+          font-weight: 500;
+          font-size: 1.2rem;
+          width: 180px;
+          margin: 0 auto;
+          letter-spacing: 3px;
+        }
+        button {
+          margin-right: 20px;
+        }
+        .btn1 {
+          color: #fff;
+        }
+
+        .btn1 {
+          position: relative;
+          background: transparent;
+          font-family: $font-3;
+          font-size: 1rem;
+
+          cursor: pointer;
+          z-index: 10;
+          trasition: all 0.5s ease;
+        }
+        .btn1:before,
+        .btn1:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 50%;
+          height: 100%;
+          background: rgb(166, 144, 69);
+          z-index: -1;
+        }
+        .btn1:before {
+          left: 0;
+          transform: scaleX(0);
+          transition: transform 0.5s;
+          transform-origin: left;
+        }
+        .btn1:hover:before {
+          transform: scaleX(1);
+          transition: transform 0.5s;
+          transform-origin: right;
+        }
+        .btn1:after {
+          right: 0;
+          transform: scaleX(0);
+          transition: transform 0.5s;
+          transform-origin: right;
+        }
+        .btn1:hover::after {
+          transform: scaleX(1);
+          transition: transform 0.5s;
+          transform-origin: left;
+        }
+        .btn1:hover {
+          color: #000;
+        }
       }
     }
   }

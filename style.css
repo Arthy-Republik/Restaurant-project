@@ -22,7 +22,6 @@
 
 body {
   min-height: 100vh;
-  max-width: 1900px;
 }
 
 li {
@@ -44,13 +43,12 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 70px 50px;
+  padding: 50px 0px;
 }
 
 header nav h2 {
@@ -75,22 +73,29 @@ header nav .navigation {
     display: -ms-flexbox;
     display: flex;
   }
+  header nav .navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .navigation ul li {
+    padding-left: 50px;
+    color: #eee;
+    font-family: "font-2", sans2serif;
+    font-size: 1.1rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header nav .navigation ul li:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: #a69045;
+    font-size: 1.2rem;
+  }
 }
 
-header nav .navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header nav .navigation ul li {
-  padding-left: 50px;
-  color: #eee;
-  font-family: "font-2", sans2serif;
-  font-size: 1.1rem;
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
   header nav .navigation ul li {
     padding-left: 15px;
   }
@@ -98,6 +103,9 @@ header nav .navigation ul li {
 
 header nav .social-network {
   color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (min-width: 1200px) {
@@ -114,6 +122,14 @@ header nav .social-network ul {
 
 header nav .social-network ul li {
   margin-right: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header nav .social-network ul li:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  cursor: pointer;
 }
 
 header .titre-1 {
@@ -164,7 +180,7 @@ header .titre-1 h1 {
 
 header .titre-1 img {
   font-size: 40px;
-  margin: 40px 0;
+  margin: 60px 0;
 }
 
 header .titre-1 h3 {
@@ -473,6 +489,7 @@ header .titre-1 h3 {
 }
 
 .bg-section-3 .section-3 {
+  width: 90%;
   padding-top: 80px;
   padding-bottom: 100px;
   display: -webkit-box;
@@ -501,7 +518,7 @@ header .titre-1 h3 {
 
 .bg-section-3 .section-3 .section-3-leftside {
   background: black;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -634,7 +651,8 @@ header .titre-1 h3 {
 
 .bg-section-3 .section-3 .section-3-rightside {
   background: #eee;
-  width: 90%;
+  width: 100%;
+  padding-bottom: 20px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,26 +716,206 @@ header .titre-1 h3 {
   }
 }
 
-.bg-section-3 .section-3 .section-3-rightside .booking-form {
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form {
+  margin: 0 auto;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form form {
+  height: 320px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "people date " "time name" "phone email";
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -ms-grid-rows: 25% 25% 25% 50%;
+      grid-template-rows: 25% 25% 25% 50%;
+      grid-template-areas: "people date" "time name" "phone email" "btn btn";
+  gap: 10px 3%;
+  margin: 0 auto;
 }
 
-.bg-section-3 .section-3 .section-3-rightside #people {
-  grid-area: "people";
+@media screen and (min-width: 1000px) {
+  .bg-section-3 .section-3 .section-3-rightside .booking-res-form form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (30%)[3];
+        grid-template-columns: repeat(3, 30%);
+    -ms-grid-rows: 25% 25% 50%;
+        grid-template-rows: 25% 25% 50%;
+        grid-template-areas: "people date time" "name phone email" "btn btn btn";
+  }
 }
 
-.bg-section-3 .section-3 .section-3-rightside #start {
-  grid-area: "date";
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-people {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: people;
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
 }
 
-.bg-section-3 .section-3 .section-3-rightside #time {
-  grid-area: "time";
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-date {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: date;
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-time {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: time;
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: name;
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-phone {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: phone;
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-email {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: email;
+  height: 50px;
+  margin: auto 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form #booking-button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: btn;
+  height: 50px;
+  background: black;
+  color: #eee;
+  border: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 180px;
+  margin: 0 auto;
+  letter-spacing: 3px;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form button {
+  margin-right: 20px;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1 {
+  color: #fff;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1 {
+  position: relative;
+  background: transparent;
+  font-family: "font-3", sans2serif;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  trasition: all 0.5s ease;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:before,
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #a69045;
+  z-index: -1;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:before {
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:after {
+  right: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.bg-section-3 .section-3 .section-3-rightside .booking-res-form .btn1:hover {
+  color: #000;
 }
 
 .events {
@@ -950,18 +1148,19 @@ header .titre-1 h3 {
   content: "";
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 500px;
   background: url(../assets/img/gmap.jpg) center/cover;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 50%;
-  bottom: -550px;
+  bottom: -600px;
 }
 
 .section-5 .first-part {
   background: #eee;
   margin: 0 auto;
   width: 67%;
+  height: 350px;
   position: relative;
   padding-bottom: 40px;
 }
@@ -980,11 +1179,37 @@ header .titre-1 h3 {
 }
 
 .section-5 .first-part p {
-  margin-top: 60px;
-  margin-left: 70px;
-  margin-right: 70px;
-  margin-bottom: 30px;
+  margin: 0 auto;
+  padding: 40px;
   font-family: "font-3", sans2serif;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 700px) {
+  .section-5 .first-part p {
+    padding: 50px;
+    font-family: "font-3", sans2serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .section-5 .first-part p {
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-family: "font-3", sans2serif;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
 .section-5 .first-part h5 {
